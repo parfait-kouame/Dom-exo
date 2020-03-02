@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Images Aleatoire 2</title>
+</head>
+<body>
+    <img src="" alt="">
+    <div>
+        <br>
+    </div>
+
+    <input type="text" id="text" placeholder="Entre une image"><br>
+    <input type="button" id="btn" value="valider">
+
+    <h3 id="message"> 
+
+    </h3>
+
+</body>
+<script>
+    var compteur=20;
+    let boutton = document.getElementById('btn');
+    var user= document.getElementById('text');
+    let message=document.getElementById('message');
+    var image=document.getElementsByTagName('img')[0];
+    var tableau=['1.jpeg','2.jpeg','3.jpeg','4.jpeg','5.jpeg'];
+    image.setAttribute('src',tableau[compteur]);
+    boutton.addEventListener('click',function(){
+        compteur = Math.floor((Math.random()*4)+1);
+        image.setAttribute('src', tableau[compteur]);
+        if(compteur==user.value){
+            message.innerHTML='Bravo !!! vous avez reussi a deviner l\'image';
+        }else{
+            message.innerHTML='Desole !!! vous n\'avez pas reussi a deviner l\'image';
+        }
+    })
+    
+</script>
+</html>

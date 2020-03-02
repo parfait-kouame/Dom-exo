@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom</title>
+</head>
+<body onload="nan()">
+    <!-- <p id="paragraphe">
+        Mr Bot est trop swagg ce matin
+
+
+        <br>
+        <br>
+    </p> -->
+
+<!-- test avec les couleurs pour deux boutons -->
+    <!-- <button onclick="rouge()">Rouge</button>
+    <button onclick="cacher()">Cacher</button>   
+    <button onclick="Vert()">Vert</button> -->
+    <!-- <p id="para1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a, iusto, ipsa earum eius sapiente nihil voluptate incidunt veniam, temporibus voluptatibus debitis qui non delectus perferendis numquam optio. Perferendis, iusto?
+           
+    </p>
+    <p id="para2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus labore placeat eaque consectetur corporis qui quo nisi est, natus odio id beatae esse necessitatibus repudiandae, eligendi accusantium. Minima, aut ab.
+    </p> -->
+
+
+    <!-- <h1>Nouveau</h1> -->
+
+    <!-- mon paragraphe pour le addventlistener -->
+    <p id="addlist">
+        
+    </p>
+<!-- la recuperation des donnees de l'user pour le faire afficher  -->
+    <label for="">Entrez votre nom</label> <br>
+    <input type="text" name="" placeholder="Entrez votre nom" id="nom"> <br>
+    <label for="">Entrez votre age</label> <br>
+    <input type="text" name="" placeholder="Entrez votre age" id="age"><br>
+    <input type="button" value="valider" id="valider">
+
+
+    <!-- le paragraphe pour changer de couleur de texte -->
+    <!-- <p id="para">
+       Salut tout le monde
+    </p> -->
+    <!-- Les boutons pour le changement de couleurs -->
+    <!-- <button onclick="color('blue')">couleur bleue</button>
+    <button onclick="color('red')"> couleur rouge</button> -->
+
+    <!-- les listes -->
+    <!-- <ul>
+        Liste des etudiants NaN
+        <li>Etudiant1</li>
+        <li>Etudiant2</li>
+        <li>Etudiant3</li>
+        <li>Etudiant4</li>
+        <li>Etudiant5</li>
+        <li>Etudiant6</li>
+    </ul> -->
+    <!-- <h1 id="titre">
+
+    </h1> -->
+
+    <!-- appel de la fonction onload -->
+    
+
+</body>
+<script>
+    // document.querySelector('#paragraphe').innerHTML='rem ipsum dolor sit amet consectetur adipisicing elit. Iure a, iusto, ipsa earum eius sapiente nihil voluptate incidunt veniam, temporibus voluptatibus debitis qui non delectus perferendis numquam optio. Perferendis, iusto';
+
+    // document.getElementById('paragraphe').style.color='blue';
+    // document.getElementById('paragraphe').style.textTransform='uppercase';
+    // document.getElementsByTagName('li').hidden();
+    // document.getElementById('titre').innerHTML=document.getElementsByTagName('ul').children[2].text;
+    function cacher(){
+        document.getElementById('para').hidden();
+    }
+
+
+// fonction pour modifier la couleur verte de mon paragraphe 
+
+    function Vert(){
+        document.getElementById('para2').style.textTransform='uppercase';
+        document.getElementById('para2').style.color='blue';
+    }
+
+    function rouge(){
+        document.getElementById('para1').style.textTransform='uppercase';
+        document.getElementById('para1').style.color='red';
+    }
+
+
+    function color(news){
+        document.getElementById('para').style.color=news;
+        document.getElementById('para').style.borderRadius='10px';
+        document.getElementById('para').style.height='50px';
+        document.getElementById('para').style.width='150px';
+        document.getElementById('para').style.left='250px';
+
+    }
+
+// on declare une variable pour le addlistener
+    // document.addEventListener('click',function (){
+    //     a=alert('Gaou , tu as un coockie');
+    //     document.getElementById('addlist').innerHTML='a';
+        
+    // })
+
+// la fonction pour les recuperer les donnees de l'user pour le faire afficher
+
+    // let nom=prompt('Veuillez donner Votre nom');
+    // let age= prompt('Veuillez donner votre Age');
+    // document.addEventListener('click',function(){
+    //     var msg=alert('Bienvenue Mr '+nom+' et vous avez '+age+' ans');
+    //     document.getElementById('addlist').innerHTML= msg ;
+    // })
+
+
+// fonction pour recuperer les valerus dans les input
+
+    //    var envoyer= document.getElementById('valider');
+    //     envoyer.addEventListener('mouseover',function(){
+    //     var nom= document.getElementById('nom').value;
+    //     var age=document.getElementById('age').value;
+
+    //     var msg = alert('Bienvenue Mr '+nom+' et vous avez '+age+' ans');
+
+    //     document.getElementById('addlist').innerHTML=msg;
+        
+    // })
+
+// fonction pour changer l'attribut de l'input
+        
+        var envoyer= document.getElementById('valider');
+        envoyer.addEventListener('click',function(){
+            var change=document.getElementsByTagName('input')[0];
+            change.setAttribute('type','button');
+            change.setAttribute('value',' Hello');
+        })
+        
+
+
+
+// ma fnction pour charger des le debut de la page un message a l'user
+
+    // function nan(){
+    //     alert('bienvenue a NaN');
+    // }
+    // onclick.getElementById('vert')='Vert()';
+// fonction pour modifier la couleur rouge de mon paragraphe 2
+</script>
+</html>

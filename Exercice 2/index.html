@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Images Aleatoire</title>
+</head>
+<body>
+    <img src="1.jpeg" alt="" >
+</body>
+<script>
+    
+    // document.addEventListener('click', function()
+    //     {
+    //         var image= document.getElementsByTagName('img')[0];
+    //         if(image.getAttribute('src')==='1.jpeg')
+    //         {
+    //              image.setAttribute('src', '2.jpeg');
+    //         } 
+    //         else if(image.getAttribute('src')==='2.jpeg')
+    //             {
+    //                 image.setAttribute('src', '3.jpeg');
+    //             }
+    //             else if(image.getAttribute('src')==='3.jpeg')
+    //                 {
+    //                     image.setAttribute('src', '4.jpeg');
+    //                 }
+    //                 else{
+    //                     image.setAttribute('src', '5.jpeg');
+    //                 }
+
+    //     })
+ // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LE CODE POUR CHARGER LES IMAGES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    var tab=['1.jpeg','2.jpeg','3.jpeg','4.jpeg','5.jpeg'];
+    var cmp=0;
+    var image= document.getElementsByTagName('img')[0];
+    image.setAttribute('src', tab[cmp]);
+    document.addEventListener('click', function(){
+        cmp=Math.floor((Math.random()*4)+1);
+        image.setAttribute('src', tab[cmp]);
+    })
+      
+</script>
+</html>
+
+
+                

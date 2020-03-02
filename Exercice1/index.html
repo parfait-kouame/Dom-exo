@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Changement d'images</title>
+</head>
+<body>
+        <img src="pic_bulboff.gif" alt="" > <br> <br>
+
+        <input type="button" id="change" value="Allumer/Eteindre">
+</body>
+<script>
+        // var a= false;
+        // var change = document.getElementById('change');
+        // change.addEventListener('click', function(){
+        //     var allume = document.getElementsByTagName('img')[0];
+        //     if(!a){
+        //         allume.setAttribute('src', 'pic_bulbon.gif');
+        //         a=true;
+        //     }else{
+        //         allume.setAttribute('src', 'pic_bulboff.gif');
+        //         a=false;
+        //     }
+        //         setTimeout(() => {
+        //             allume.setAttribute('src', 'pic_bulboff.gif')
+        //         }, 1000);;
+        // })
+
+
+ // ::::::::::::::::::::::::::::::deuxieme methode pour allumer et eteindre la lampe;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        
+        var change = document.getElementById('change');// on recupere l'id du boutton
+            // lorsqu'on clique sur le boutton qui a l'id change on declenche une fonction
+        change.addEventListener('click',function(){
+            
+            var allume = document.getElementsByTagName('img')[0];// on recupere l'image avec le tagName
+                 // on va ensuite recuperer l'attribut de l'image et la comparer avec une sources defini
+            if(allume.getAttribute('src')==='pic_bulboff.gif'){
+                allume.setAttribute('src', 'pic_bulbon.gif');
+                setTimeout(() => 
+                {
+                 change.setAttribute('value', 'Eteindre')
+                });;
+            }else{
+                allume.setAttribute('src','pic_bulboff.gif');
+                setTimeout(() => 
+                {
+                 change.setAttribute('value', 'Allumer')
+                });;
+            }
+        })
+
+// ::::::::::::::::::::::::::::::deuxieme methode pour allumer et eteindre la lampe;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    </script>
+
+</html>
